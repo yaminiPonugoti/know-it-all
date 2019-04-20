@@ -18,7 +18,7 @@ server.listen(port, hostname, () => {
 
 
 const MongoClient = require(‘mongodb’).MongoClient;
-const uri = "mongodb+srv://admin:<password>@know-it-all-uob80.mongodb.net/test?retryWrites=true";
+const uri = "mongodb+srv://admin:knowit@ll1@know-it-all-uob80.mongodb.net/test?retryWrites=true";
 const client = new MongoClient(uri, { useNewUrlParser: true });
 client.connect(err => {
 const collection = client.db("test").collection("devices");
