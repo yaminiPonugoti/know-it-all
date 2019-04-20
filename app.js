@@ -26,7 +26,7 @@ app.listen(port, hostname, () => {
 });
 
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb+srv://admin1:knowit@ll1@know-it-all-uob80.mongodb.net/test?retryWrites=true";
+var url = "mongodb+srv://admin1:knowitall@know-it-all-uob80.mongodb.net/test?retryWrites=true";
 MongoClient.connect(url, {useNewUrlParser: true},function(err,db) {
   if (err) throw err;
   console.log("Database created!");
