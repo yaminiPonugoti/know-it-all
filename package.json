@@ -11,7 +11,6 @@
     "type": "git",
     "url": "https://github.com/yaminiPonugoti/know-it-all.git"
   },
-
   "keywords": [
     "example",
     "heroku"
@@ -24,6 +23,7 @@
   "homepage": " https://yaminiponugoti.github.io/know-it-all/#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "express-generator": "^4.16.0",
     "mongodb": "^3.2.3",
     "pkg": "^4.3.7"
   },
