@@ -30,11 +30,11 @@ var url = "mongodb+srv://khushi:khushi@be-better-together-wmrbk.mongodb.net/test
 MongoClient.connect(url, {useNewUrlParser: true},function(err,db) {
   if (err) throw err;
   console.log("Database created!");
-  const data = {name: "username", description: "password"};
-  db.collection("datas").insertOne(data, function(err,res){
-    db.close();
-  });
+  db.close();
 });
+
+
+
 
 /*const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://admin1:knowit@ll1@know-it-all-uob80.mongodb.net/test?retryWrites=true";
@@ -45,4 +45,4 @@ const collection = client.db("test").collection("devices");
 client.close();
 
 
-}*/
+}*/);
