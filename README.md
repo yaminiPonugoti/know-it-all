@@ -1,5 +1,7 @@
 # know-it-all
-made by Yamini, Shameetha & Dianne! 
+made by Yamini - yponugot@purdue.edu 
+        Shameetha - jeromes@purdue.edu 
+        Dianne - santos50@purdue.edu 
 
 multi-player, general knowledge quiz app targeting middle schoolers!
 
