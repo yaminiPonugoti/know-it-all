@@ -20,7 +20,4 @@
     "url": "https://github.com/yaminiPonugoti/know-it-all/issues"
   },
   "homepage": "https://github.com/yaminiPonugoti/know-it-all#readme"
-  "engines": {
-    "node": "11.10.1"
-  }
 }
