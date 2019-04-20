@@ -19,12 +19,11 @@ app.use(express.static('public'));
 
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/login.html'));
-  //__dirname : It will resolve to your project folder.
 });
 
 
 
-server.listen(port, hostname, () => {
+app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
 
