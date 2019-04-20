@@ -21,8 +21,6 @@ app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/login.html'));
 });
 
-
-
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
@@ -33,7 +31,25 @@ MongoClient.connect(url, {useNewUrlParser: true},function(err,db) {
   if (err) throw err;
   console.log("Database created!");
   db.close();
-}
+});
+
+var loginSchema = new MongoClient.Schema({
+  email: String,
+  password: String
+ });
+
+ var User = MongoClient.model("User", loginSchema);
+
+ app.post("/addname", (req, res) => {
+  var myData = new User(req.body);
+  myData.save()
+  .then(item => {
+  res.send("item saved to database");
+  })
+  .catch(err => {
+  res.status(400).send("unable to save to database");
+  });
+ });
 
 /*const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://admin1:knowit@ll1@know-it-all-uob80.mongodb.net/test?retryWrites=true";
