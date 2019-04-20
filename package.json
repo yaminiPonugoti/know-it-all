@@ -1,8 +1,8 @@
 {
   "name": "know-it-all",
   "version": "1.0.0",
-  "description": "<<<<<<< HEAD made by Yamini, Shameetha & Dianne!!  ======= made by Yamini - yponugot@purdue.edu          Shameetha - jeromes@purdue.edu          Dianne - santos50@purdue.edu",
-  "main": "index.js",
+  "description": "made by Yamini - yponugot@purdue.edu          Shameetha - jeromes@purdue.edu          Dianne - santos50@purdue.edu",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,14 +10,17 @@
     "type": "git",
     "url": "git+https://github.com/yaminiPonugoti/know-it-all.git"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yaminiPonugoti/know-it-all/issues"
   },
-  "homepage": "https://github.com/yaminiPonugoti/know-it-all#readme",
-  "dependencies": {
-    "express": "^4.16.4",
-    "pkg": "^4.3.7"
+  "homepage": "https://github.com/yaminiPonugoti/know-it-all#readme"
+  "engines": {
+    "node": "11.10.1"
   }
 }
