@@ -45,4 +45,4 @@ const collection = client.db("test").collection("devices");
 client.close();
 
 
-}*/);
+}*/
