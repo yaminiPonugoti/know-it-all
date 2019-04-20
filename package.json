@@ -9,9 +9,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yaminiPonugoti/know-it-all.git"
+    "url": "git+https://github.com/yaminiPonugoti/know-it-all.git"
   },
-
   "keywords": [
     "example",
     "heroku"
@@ -21,11 +20,10 @@
   "bugs": {
     "url": "https://github.com/yaminiPonugoti/know-it-all/issues"
   },
-  "homepage": " https://yaminiponugoti.github.io/know-it-all/#readme",
+  "homepage": "https://github.com/yaminiPonugoti/know-it-all#readme",
   "dependencies": {
     "express": "^4.16.4",
     "mongodb": "^3.2.3",
     "pkg": "^4.3.7"
-  },
-  "devDependencies": {}
+  }
 }
