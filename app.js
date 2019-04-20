@@ -30,26 +30,11 @@ var url = "mongodb+srv://khushi:khushi@be-better-together-wmrbk.mongodb.net/test
 MongoClient.connect(url, {useNewUrlParser: true},function(err,db) {
   if (err) throw err;
   console.log("Database created!");
-  db.close();
-});
-
-var loginSchema = new MongoClient.Schema({
-  email: String,
-  password: String
- });
-
- var User = MongoClient.model("User", loginSchema);
-
- app.post("/addname", (req, res) => {
-  var myData = new User(req.body);
-  myData.save()
-  .then(item => {
-  res.send("item saved to database");
-  })
-  .catch(err => {
-  res.status(400).send("unable to save to database");
+  const data = {name: "username", description: "password"};
+  db.collection("datas").insertOne(data, function(err,res){
+    db.close();
   });
- });
+});
 
 /*const MongoClient = require('mongodb').MongoClient;
 const uri = "mongodb+srv://admin1:knowit@ll1@know-it-all-uob80.mongodb.net/test?retryWrites=true";
