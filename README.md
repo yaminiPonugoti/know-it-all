@@ -1,7 +1,5 @@
 # know-it-all
-<<<<<<< HEAD
-made by Yamini, Shameetha & Dianne!! 
-=======
+
 made by Yamini - yponugot@purdue.edu 
         Shameetha - jeromes@purdue.edu 
         Dianne - santos50@purdue.edu 
