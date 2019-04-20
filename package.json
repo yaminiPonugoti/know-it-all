@@ -24,7 +24,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "express-generator": "^4.16.0",
-    "mongodb": "^3.2.3",
+    "mongodb": "^2.2.33",
     "mongoose": "^5.5.2",
     "pkg": "^4.3.7"
   }
