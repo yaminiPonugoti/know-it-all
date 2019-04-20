@@ -1,5 +1,5 @@
 # know-it-all
-made by Yamini, Shameetha & Dianne! 
+made by Yamini, Shameetha & Dianne!! 
 
 multi-player, general knowledge quiz app targeting middle schoolers!
 
