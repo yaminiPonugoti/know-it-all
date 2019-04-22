@@ -21,6 +21,10 @@ app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/login.html'));
 });
 
+app.get('/',function(req,res){
+  res.sendFile(path.join(__dirname+'/quiz.html'));
+});
+
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
