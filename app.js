@@ -34,12 +34,12 @@ app.listen(port, hostname, () => {
 //creating the schema
 var mongoose = require('mongoose');
 var UserSchema = new mongoose.Schema({
-  email: {
+ /* email: {
     type: String,
     unique: true,
     required: true,
     trim: true
-  },
+  }, */
   username: {
     type: String,
     unique: true,
@@ -56,13 +56,13 @@ module.exports = User;
 
 
 //inserting data into MongoDb
-
-if (req.body.email &&
+var bodyParser = require("body-parser");  
+if (/*req.body.email &&*/
   req.body.username &&
   req.body.password &&
   req.body.passwordConf) {
   var userData = {
-    email: req.body.email,
+   /* email: req.body.email, */
     username: req.body.username,
     password: req.body.password,
   }
@@ -75,6 +75,7 @@ if (req.body.email &&
     }
   });
 }
+
 
 
 /*
