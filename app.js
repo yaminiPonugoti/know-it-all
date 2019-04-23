@@ -2,6 +2,7 @@ const http = require('http');
 
 const hostname = '127.0.0.1';
 const port = 5000;
+var bodyParser = require("body-parser");  
 
 const express = require('express');
 const app = express();
@@ -56,8 +57,7 @@ module.exports = User;
 
 
 //inserting data into MongoDb
-var bodyParser = require("body-parser");  
-if ( req.body.username &&
+if (req.body.username &&
   req.body.password &&
   req.body.passwordConf) {
   var userData = {
