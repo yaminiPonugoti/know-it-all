@@ -6,7 +6,7 @@ var assert = require('assert');
 var url = 'mongodb:://127.0.0.1:5000/';
 
 router.get('/', function(req, res, next){
-   res.render('login');
+   res.render('index');
 });
 
 router.get('/get-data', function(req, res, next){
@@ -15,11 +15,11 @@ router.get('/get-data', function(req, res, next){
       assert.equal(null,err);
       var cursor = db.collection('user-info').find();
       cursor.forEach(function(doc,err){
-         assert(null,err);//not sure about this line assert.(null,err)
+         assert.equal(null,err);//not sure about this line assert.(null,err)
          resultArray.push(doc);
       }, function(){
          db.close();
-         res.render('quiz',{items: resultArray});
+         res.render('index',{items: resultArray});
       });
    });
 });
