@@ -8,7 +8,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const router = express.Router();
-var User = require('../user');
+var User = require('/user');
 app.use(express.static('public'));
 
 
@@ -17,7 +17,6 @@ app.use(express.static('public'));
 //   res.setHeader('Content-Type', 'text/plain');
 //   res.end('Hello World\n');
 // });
-//
 
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/login.html'));
