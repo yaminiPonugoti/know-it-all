@@ -16,6 +16,7 @@ app.use(express.static('public'));
 //   res.setHeader('Content-Type', 'text/plain');
 //   res.end('Hello World\n');
 // });
+//cole
 
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/login.html'));
