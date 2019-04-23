@@ -8,7 +8,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const router = express.Router();
-var User = require('../user');
+var User = require('/user');
 app.use(express.static('public'));
 
 
