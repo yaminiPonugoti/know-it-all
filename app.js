@@ -57,8 +57,7 @@ module.exports = User;
 
 //inserting data into MongoDb
 var bodyParser = require("body-parser");  
-if (/*req.body.email &&*/
-  req.body.username &&
+if ( req.body.username &&
   req.body.password &&
   req.body.passwordConf) {
   var userData = {
