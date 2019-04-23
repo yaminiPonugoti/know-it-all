@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "made by Yamini - yponugot@purdue.edu          Shameetha - jeromes@purdue.edu          Dianne - santos50@purdue.edu",
   "main": "app.js",
-  "engines":{
+  "engines": {
     "node": "10.15.3",
     "npm": "6.4.1"
   },
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/yaminiPonugoti/know-it-all#readme",
   "dependencies": {
+    
     "express": "^4.16.4",
     "express-generator": "^4.16.0",
     "mongodb": "^3.2.3",
