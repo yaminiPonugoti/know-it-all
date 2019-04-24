@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image:url(./WhiteBackground.jpg);
+    background-image:url(./WhiteBackground.jpeg);
     font-family: Arial, Helvetica, sans-serif;
     }
     #navContent{
@@ -27,14 +27,14 @@ body {
         }
 .questionText{
         font-size:27px;
-        color:#FFF;
+        color:#6F3994;
         }
 .option{
         width:400px;
         height:30px;
         margin:15px;
         font-size:18px;
-        color:#FFFFFF;
+        color:#6F3994;
         padding:2px;
         padding-left:10px;
         border: 2px solid white;
@@ -46,11 +46,9 @@ body {
         color:#FC0;
         }
  #topbar{
-        height:30px;
-        margin:auto;
-        margin-top:30px;
-        color:#FFF;
-        width:500px;
+        position: relative;
+        border: 1px solid;
+        margin-top: 50px;
         }
 .spacer{
         height:30px;
@@ -60,7 +58,7 @@ body {
         width:150px;
         padding:5px;
         font-size:30px;
-        color:#FFFFCC;
+        color:#6F3994;
         background-color:#009900;
         font-family:Arial, Helvetica, sans-serif;
         text-align:center;
@@ -70,7 +68,7 @@ body {
         width:150px;
         padding:5px;
         font-size:30px;
-        color:#FFFFCC;
+        color:#6F3994;
         background-color:#CC3300;
         font-family:Arial, Helvetica, sans-serif;
         text-align:center;
@@ -84,5 +82,9 @@ body {
         }
 @media screen and (max-width:460px) {
         .option{width:80%;margin:5%;}
+        }
+ img.resize {
+        max-width:50%;
+        max-height:50%;
         }
             
