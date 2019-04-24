@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-image:url(./greybg.png);
+    background-image:url(./WhiteBackground.jpg);
     font-family: Arial, Helvetica, sans-serif;
     }
     #navContent{
@@ -46,14 +46,11 @@ body {
         color:#FC0;
         }
  #topbar{
-        height:50px;
+        height:30px;
         margin:auto;
-        margin-top:50px;
+        margin-top:30px;
         color:#FFF;
-        font-size:36px;
-        font-family:Arial, Helvetica, sans-serif;
-        width:800px;
-        border-bottom:solid white 1px;
+        width:500px;
         }
 .spacer{
         height:30px;
