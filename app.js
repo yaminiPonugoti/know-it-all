@@ -1,3 +1,4 @@
+
 const http = require('http');
 
 const hostname = '127.0.0.1';
@@ -10,7 +11,8 @@ const path = require('path');
 const router = express.Router();
 // var User = require('/user');
 app.use(express.static('public'));
-
+<link rel="shortcut icon" href="./favicon.ico" />
+<link rel="icon" href="./favicon.ico" />
 
 // const server = http.createServer((req, res) => {
 //   res.statusCode = 200;
