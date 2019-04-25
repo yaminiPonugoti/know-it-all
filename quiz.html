@@ -108,10 +108,10 @@
     var questionLock=false;
     var numberOfQuestions;
     var score=0;
-             
+    const path = require('path');
 
      
-$.getJSON(res.sendFile(path.join(__dirname+'/activity.json')), function(data) {
+$.getJSON(path.join(__dirname+'/activity.json'), function(data) {
     
 
     for(i=0;i<data.quizlist.length;i++){ 
