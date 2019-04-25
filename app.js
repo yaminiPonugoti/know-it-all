@@ -1,7 +1,7 @@
 
 const http = require('http');
 
-//const hostname = '127.0.0.1';
+const hostname = '127.0.0.1';
 const port = 5000;
 
 const express = require('express');
@@ -9,7 +9,7 @@ const app = express();
 const path = require('path');
 const router = express.Router();
 // var User = require('/user');
-//app.use(express.static('public'));
+app.use(express.static('public'));
 //creating mongoose connection
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
@@ -48,9 +48,9 @@ app.get('/quiz',function(req,res){
   res.sendFile(path.join(__dirname+'/quiz.html'));
 });
 
-// app.get('/signup',function(req,res){
-//   res.sendFile(path.join(__dirname+'/signup.html'));
-// });
+app.get('/signup',function(req,res){
+  res.sendFile(path.join(__dirname+'/signup.html'));
+});
 
 
 app.listen(port, hostname, () => {
