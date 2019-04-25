@@ -43,17 +43,6 @@ app.get('/quiz',function(req,res){
   res.sendFile(path.join(__dirname+'/quiz.html'));
 });
 
-app.get('/main.css',function(req,res){
-  res.sendFile(path.join(__dirname+'/main.css'));
-});
-
-app.get('/jquery.js',function(req,res){
-  res.sendFile(path.join(__dirname+'/jquery.js'));
-});
-
-app.get('/controller.js',function(req,res){
-  res.sendFile(path.join(__dirname+'/controller.js'));
-});
 
 app.get('/signup',function(req,res){
   res.sendFile(path.join(__dirname+'/signup.html'));
