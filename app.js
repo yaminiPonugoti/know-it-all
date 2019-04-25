@@ -53,13 +53,7 @@ app.listen(port, hostname, () => {
 });
 
 app.post("/signup", (req, res) => {
-
-  let userData ={
-    username,
-    password
-  };
-
-  var myData = new User(req.body);
+  var myData = new user(req.body);
   myData.save()
       .then(item => {
           res.sendFile(path.join(__dirname+'/quiz'));
