@@ -24,8 +24,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 var nameSchema = new mongoose.Schema({
-  firstName: String,
-  lastNameName: String
+  username: String,
+  password: String
  });
 
  var User = mongoose.model("User", nameSchema);
@@ -62,6 +62,7 @@ app.post("/signup", (req, res) => {
   myData.save()
       .then(item => {
           res.send("Name saved to database");
+          //res.sendFile(path.join(__dirname+'/quiz.html'));
       })
       .catch(err => {
           res.status(400).send("Unable to save to database");
