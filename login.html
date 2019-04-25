@@ -209,7 +209,7 @@ input::-moz-focus-inner {
 		<div class="container">
 		  <div class="left">
 			<div class="login">Know It All Login</div>
-			<div class="eula">By logging in you agree to the ridiculously long terms that you didn't bother to read</div>
+			<div class="eula">Login and start testing your brain power!</div>
 		  </div>
 		  <div class="right">
 			<svg viewBox="0 0 320 300">
@@ -234,12 +234,18 @@ input::-moz-focus-inner {
 			  </defs>
 			  <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
 			</svg>
-			<div class="form">
-			  <label for="email">Username</label>
-			  <input type="email" id="email">
-			  <label for="password">Password</label>
-			  <input type="password" id="password">
-			  <input type="submit" id="submit" value="Submit">
+			<div class="login-form">
+				<form action="/signin" method="POST">
+			  		<label for="email">Username</label>
+			  		<input type="email" id="email">
+			  		<label for="password">Password</label>
+			  		<input type="password" id="password">
+			  		<input type="submit" id="submit" value="Submit">
+			</form>
+			<form action="/signin" method="POST">
+				<p></p>
+				<input type="submit" value ="Need an account?">
+			</form>
 			</div>
 		  </div>
 		</div>
