@@ -13,7 +13,7 @@ var UserSchema = new mongoose.Schema({
     required: true,
   }
 });
-
+//hi
 //authenticate input against database
 UserSchema.statics.authenticate = function (username, password, callback) {
   User.findOne({ username: username })
