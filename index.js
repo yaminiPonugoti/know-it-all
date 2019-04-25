@@ -24,7 +24,7 @@ router.get('/get-data', function(req, res, next){
    });
 });
 
-router.get('/insert', function(req, res, next){
+router.get('/signup', function(req, res, next){
    var item = {
       username: req.body.username,
       password: req.body.password
