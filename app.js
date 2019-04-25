@@ -3,7 +3,6 @@ const http = require('http');
 
 const hostname = '127.0.0.1';
 const port = 5000;
-var bodyParser = require("body-parser");  
 
 const express = require('express');
 const app = express();
@@ -15,6 +14,21 @@ app.use(express.static('public'));
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb+srv://admin1:knowitall@know-it-all-uob80.mongodb.net/test?retryWrites=true");
+// if(error){
+//   console.log("Couldn't connect to database");
+// } else {
+//   console.log("Connected To Database");
+// }
+var bodyParser = require("body-parser");  
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+var nameSchema = new mongoose.Schema({
+  firstName: String,
+  lastNameName: String
+ });
+
+ var User = mongoose.model("User", nameSchema);
 
 
 {/* <link rel="shortcut icon" href="./favicon.ico" />
@@ -34,15 +48,25 @@ app.get('/quiz',function(req,res){
   res.sendFile(path.join(__dirname+'/quiz.html'));
 });
 
-app.get('/signup',function(req,res){
-  res.sendFile(path.join(__dirname+'/signup.html'));
-});
+// app.get('/signup',function(req,res){
+//   res.sendFile(path.join(__dirname+'/signup.html'));
+// });
 
 
 app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
 
+app.post("/signup", (req, res) => {
+  var myData = new User(req.body);
+  myData.save()
+      .then(item => {
+          res.send("Name saved to database");
+      })
+      .catch(err => {
+          res.status(400).send("Unable to save to database");
+      });
+});
 
 //creating the schema
 // var mongoose = require('mongoose');
