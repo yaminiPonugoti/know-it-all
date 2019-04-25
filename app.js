@@ -38,6 +38,7 @@ var nameSchema = new mongoose.Schema({
 
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/login.html'));
+  console.log(path.join(__dirname+'/login.html'));
 });
 
 app.get('/quiz',function(req,res){
