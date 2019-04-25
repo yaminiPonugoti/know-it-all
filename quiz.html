@@ -9,7 +9,7 @@
 		body {
     margin: 0;
     padding: 0;
-    background-image:url(./WhiteBackground.jpeg);
+    background-image:url(WhiteBackground.jpeg);
     font-family: Arial, Helvetica, sans-serif;
     }
     #navContent{
@@ -116,7 +116,7 @@
              
 
      
-$.getJSON('activity.json', function(data) {
+$.getJSON(activity.json, function(data) {
     
     for(i=0;i<data.quizlist.length;i++){ 
             questions[i]=new Array;
