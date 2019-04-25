@@ -15,7 +15,7 @@ router.get('/get-data', function(req, res, next){
       assert.equal(null,err);
       var cursor = db.collection('user-info').find();
       cursor.forEach(function(doc,err){
-         assert.equal(null,err);//not sure about this line assert.(null,err)
+         assert.equal(null,err);
          resultArray.push(doc);
       }, function(){
          db.close();
@@ -24,7 +24,7 @@ router.get('/get-data', function(req, res, next){
    });
 });
 
-router.get('/signup', function(req, res, next){
+router.post('/signup', function(req, res, next){
    var item = {
       username: req.body.username,
       password: req.body.password
