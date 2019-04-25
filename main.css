@@ -45,6 +45,10 @@ body {
         color: blue;
         border:blue solid 2px;
         }
+#header {
+        color: #A792BC;
+
+}
  #topbar{
         position: top;
         margin-top: 5px;
