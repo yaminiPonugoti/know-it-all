@@ -14,11 +14,6 @@ app.use(express.static('public'));
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
 mongoose.connect("mongodb+srv://admin1:knowitall@know-it-all-uob80.mongodb.net/test?retryWrites=true");
-// if(error){
-//   console.log("Couldn't connect to database");
-// } else {
-//   console.log("Connected To Database");
-// }
 var bodyParser = require("body-parser");  
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
