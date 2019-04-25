@@ -209,13 +209,18 @@ input::-moz-focus-inner {
 			</svg>
 			<div class="login-form">
 				<form action="/signup" method="POST">
-					<label for="name">Name (first and last)</label>
-			  		<input type="name" id="name">
+					<label for="name">First Name</label>
+					<input type="name" id="last">
+					<label for="last">Last Name</label>
+			  		<input type="last" id="last">
 			  		<label for="email">Username</label>
 			  		<input type="email" id="email">
 			  		<label for="password">Password</label>
 			  		<input type="password" id="password">
-			  		<input type="submit" id="submit" value="Submit">
+			</form>
+			<form action="/signin" method="GET">
+				<p></p>
+				<input type="submit" id="submit" value="Submit">
 			</form>
 			</div>
 		  </div>
