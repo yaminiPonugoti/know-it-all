@@ -58,7 +58,7 @@ app.post("/signup", (req, res) => {
   var myData = new user(req.body);
   myData.save()
       .then(item => {
-          res.sendFile(path.join(__dirname+'/quiz'));
+          res.sendFile(path.join(__dirname+'/quiz.html'));
       })
       .catch(err => {
           res.status(400).send("Unable to save to database");
