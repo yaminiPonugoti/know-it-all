@@ -63,6 +63,25 @@ app.post("/signup", (req, res) => {
       });
 });
 
+app.post("/signin",(req,res) =>{
+  let{username,password} = req.body;
+  user.findOne({username:username},'username password',(err,userData)=>{
+    if(!err){
+      console.log(myData.password);
+      if(password === myData.password){
+        res.sendFile(path.join(__dirname+'/quiz.html'));
+      }
+      else{
+        res.sendFile(path.join(__dirname+'/login.html'));
+       // res.status(401).send(password+'incorrect password');
+      }
+    }
+    else{
+      res.status(401).send('invalid login information')
+    }
+    });
+  });
+
 //creating the schema
 // var mongoose = require('mongoose');
 // var UserSchema = new mongoose.Schema({
