@@ -10,7 +10,7 @@ $(document).ready(function () {
              
 
      
-$.getJSON('/activity.json', function(data) {
+$.getJSON('../activity.json', function(data) {
     
     for(i=0;i<data.quizlist.length;i++){ 
             questions[i]=new Array;
