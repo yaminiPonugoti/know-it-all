@@ -42,17 +42,142 @@
         "option3":"Pyongyang"
     },
     {
-        "question":"What is the capital of South Korea?",
-        "option1":"Seoul",
-        "option2":"Busan",
-        "option3":"Pyongyang"
+        "question":"How many moons does Jupiter have?",
+        "option1":"67",
+        "option2":"37",
+        "option3":"16"
     },
     {
-        "question":"What is the capital of South Korea?",
-        "option1":"Seoul",
-        "option2":"Busan",
-        "option3":"Pyongyang"
+        "question":"UNICEF is a United Nations organization that focuses on..?",
+        "option1":"Children",
+        "option2":"Environment",
+        "option3":"Human Rights"
+    },
+    {
+        "question":"What type of animal is the largest primate in the world?",
+        "option1":"Gorilla",
+        "option2":"Orangutan",
+        "option3":"Siamang"
+    },
+    {
+        "question":"What is the first element on the periodic table?",
+        "option1":"Hydrogen",
+        "option2":"Nitrogen",
+        "option3":"Oxygen"
+    },
+    {
+        "question":"K is the chemical symbol for which element?",
+        "option1":"Potassium",
+        "option2":"Krypton",
+        "option3":"Plutonium"
+    },
+    {
+        "question":"What is the most abundant element in the universe?",
+        "option1":"Hydrogen",
+        "option2":"Carbon",
+        "option3":"Oxygen"
+    },
+    {
+        "question":"What is the name of the largest ocean on Earth?",
+        "option1":"Pacific Ocean",
+        "option2":"Atlantic Ocean",
+        "option3":"Artic Ocean"
+    },
+    {
+        "question":"What do you call molten rock before it has erupted?",
+        "option1":"Magma",
+        "option2":"Lava",
+        "option3":"cast iron"
+    },
+    {
+        "question":"The Great Barrier Reef is found off the coast of which country?",
+        "option1":"Australia",
+        "option2":"Indonesia",
+        "option3":"New Zealand"
+    },
+    {
+        "question":"'Cascade', 'horsetail', 'plunge' and 'tiered' are types of what?",
+        "option1":"Waterfalls",
+        "option2":"Rock formations",
+        "option3":"Volcanoes"
+    },
+    {
+        "question":"What is the top color in a rainbow?",
+        "option1":"Red",
+        "option2":"Violet",
+        "option3":"Blue"
+    },
+    {
+        "question":"What is the distance around a circle called?",
+        "option1":"Circumference",
+        "option2":"Radius",
+        "option3":"Diameter"
+    },
+    {
+        "question":"What is the capital of Japan?",
+        "option1":"Tokyo",
+        "option2":"Osaka",
+        "option3":"Hiroshima"
+    },
+    {
+        "question":"The Statue of Liberty was gifted to the United States by which country?",
+        "option1":"France",
+        "option2":"England",
+        "option3":"Germany"
+    },
+    {
+        "question":"Which was the country that first made the use of paper money?",
+        "option1":"China",
+        "option2":"United States of America",
+        "option3":"Russia"
+    },
+    {
+        "question":"",
+        "option1":"",
+        "option2":"",
+        "option3":""
+    },
+    {
+        "question":"",
+        "option1":"",
+        "option2":"",
+        "option3":""
+    },
+    {
+        "question":"",
+        "option1":"",
+        "option2":"",
+        "option3":""
+    },
+    {
+        "question":"",
+        "option1":"",
+        "option2":"",
+        "option3":""
+    },
+    {
+        "question":"",
+        "option1":"",
+        "option2":"",
+        "option3":""
+    },
+    {
+        "question":"",
+        "option1":"",
+        "option2":"",
+        "option3":""
+    },
+    {
+        "question":"",
+        "option1":"",
+        "option2":"",
+        "option3":""
+    },
+    {
+        "question":"",
+        "option1":"",
+        "option2":"",
+        "option3":""
     }
-
     ]
     }
