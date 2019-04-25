@@ -1,7 +1,7 @@
 
 const http = require('http');
 
-const hostname = '127.0.0.1';
+//const hostname = '127.0.0.1';
 const port = 5000;
 var bodyParser = require("body-parser");  
 
@@ -10,7 +10,7 @@ const app = express();
 const path = require('path');
 const router = express.Router();
 // var User = require('/user');
-app.use(express.static('public'));
+//app.use(express.static('public'));
 //creating mongoose connection
 var mongoose = require("mongoose");
 mongoose.Promise = global.Promise;
