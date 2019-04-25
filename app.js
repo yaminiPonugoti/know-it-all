@@ -11,6 +11,12 @@ const path = require('path');
 const router = express.Router();
 // var User = require('/user');
 app.use(express.static('public'));
+//creating mongoose connection
+var mongoose = require("mongoose");
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb+srv://admin1:knowitall@know-it-all-uob80.mongodb.net/test?retryWrites=true");
+
+
 {/* <link rel="shortcut icon" href="./favicon.ico" />
 <link rel="icon" href="./favicon.ico" /> */}
 
@@ -84,13 +90,13 @@ app.listen(port, hostname, () => {
 
 
 
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb+srv://admin1:knowitall@know-it-all-uob80.mongodb.net/test?retryWrites=true";
-MongoClient.connect(url, {useNewUrlParser: true},function(err,db) {
-  if (err) throw err;
-  console.log("Database created!");
-  db.close();
-});
+// var MongoClient = require('mongodb').MongoClient;
+// var url = "mongodb+srv://admin1:knowitall@know-it-all-uob80.mongodb.net/test?retryWrites=true";
+// MongoClient.connect(url, {useNewUrlParser: true},function(err,db) {
+//   if (err) throw err;
+//   console.log("Database created!");
+//   db.close();
+// });
 
 
 
