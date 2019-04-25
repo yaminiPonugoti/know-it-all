@@ -8,7 +8,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const router = express.Router();
-// var User = require('/user');
+var user = require("./models/user.js");
 app.use(express.static('public'));
 //creating mongoose connection
 var mongoose = require("mongoose");
@@ -53,15 +53,34 @@ app.listen(port, hostname, () => {
 });
 
 app.post("/signup", (req, res) => {
-  var myData = new User(req.body);
+  var myData = new user(req.body);
   myData.save()
       .then(item => {
-          res.sendFile(path.join(__dirname+'/quiz.html'));
+          res.sendFile(path.join(__dirname+'/quiz'));
       })
       .catch(err => {
           res.status(400).send("Unable to save to database");
       });
 });
+
+app.post("/signin",(req,res) =>{
+  let{username,password} = req.body;
+  user.findOne({username:username},'username password',(err,userData)=>{
+    if(!err){
+      console.log(userData.password);
+      if(password === userData.password){
+        res.sendFile(path.join(__dirname+'/quiz.html'));
+      }
+      else{
+        res.sendFile(path.join(__dirname+'/login.html'));
+       // res.status(401).send(password+'incorrect password');
+      }
+    }
+    else{
+      res.status(401).send('invalid login information')
+    }
+    });
+  });
 
 //creating the schema
 // var mongoose = require('mongoose');
