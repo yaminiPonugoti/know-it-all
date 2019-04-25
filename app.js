@@ -8,7 +8,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const router = express.Router();
-// var User = require('/user');
+var user = require("./models/user.js");
 app.use(express.static('public'));
 //creating mongoose connection
 var mongoose = require("mongoose");
@@ -56,7 +56,7 @@ app.post("/signup", (req, res) => {
   var myData = new User(req.body);
   myData.save()
       .then(item => {
-          res.sendFile(path.join(__dirname+'/quiz.html'));
+          res.sendFile(path.join(__dirname+'/quiz'));
       })
       .catch(err => {
           res.status(400).send("Unable to save to database");
@@ -65,7 +65,7 @@ app.post("/signup", (req, res) => {
 
 app.post("/signin",(req,res) =>{
   let{username,password} = req.body;
-  user.findOne({username:username},'username password',(err,userData)=>{
+  user.findOne({username:username},'username password',(err,myData)=>{
     if(!err){
       console.log(myData.password);
       if(password === myData.password){
