@@ -6,16 +6,53 @@
     "option3":"Einstein and Darwin"
     },
     {
-    "question":"Question",
-    "option1":"option",
-    "option2":"option",
-    "option3":"option"
+    "question":"In what country would you find Mout Kilimanjaro? ",
+    "option1":"Tanzania",
+    "option2":"Uganda",
+    "option3":"India"
     },
     {
-    "question":"Question",
-    "option1":"option",
-    "option2":"option",
-    "option3":"option"
+    "question":"What major river flows through the grand canyon?",
+    "option1":"Colorado River",
+    "option2":"Missouri River",
+    "option3":"Mississippi River"
+    },
+    {
+        "question":"What is the fastest land animal?",
+        "option1":"Cheetah",
+        "option2":"Lion",
+        "option3":"Pronghorn Antelope"
+    },
+    {
+        "question":"What is the largest island in the Mediterranean Sea?",
+        "option1":"Sicily",
+        "option2":"Ibiza",
+        "option3":"Menorca"
+    },
+    {
+        "question":"What is the largest country in Africa ?",
+        "option1":"Algeria",
+        "option2":"Democratic Republic of the Congo",
+        "option3":"Libya"
+    },
+    {
+        "question":"What is the capital of South Korea?",
+        "option1":"Seoul",
+        "option2":"Busan",
+        "option3":"Pyongyang"
+    },
+    {
+        "question":"What is the capital of South Korea?",
+        "option1":"Seoul",
+        "option2":"Busan",
+        "option3":"Pyongyang"
+    },
+    {
+        "question":"What is the capital of South Korea?",
+        "option1":"Seoul",
+        "option2":"Busan",
+        "option3":"Pyongyang"
     }
+
     ]
     }
