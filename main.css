@@ -49,6 +49,10 @@ body {
         position: top;
         margin-top: 5px;
         }
+ #colorstrip{
+        height: 0px;
+        border-bottom:solid 2px purple;
+        }​
 
 .correct{
         width:200px;
@@ -71,7 +75,7 @@ body {
         }
             
  @media screen and (max-width:800px) {
-        #topbar{margin-left:1%;margin-right:1%;	width:96%;}
+        #topbar{margin-left:1%;margin-right:1%;	width:50%;}
         #navContent{margin:1%;	width:98%;}
         #game1{margin:1%;	width:98%;}
         #game2{margin:1%;	width:98%;}
