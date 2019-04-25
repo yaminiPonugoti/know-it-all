@@ -50,8 +50,8 @@ body {
         margin-top: 5px;
         }
  #colorstrip{
-        height: 10px;
-        border-bottom:solid 2px purple;
+        height: 0px;
+        border-bottom:solid 10px purple;
         }​
 
 .correct{
