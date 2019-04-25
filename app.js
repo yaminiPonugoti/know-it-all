@@ -53,6 +53,12 @@ app.listen(port, hostname, () => {
 });
 
 app.post("/signup", (req, res) => {
+
+  let userData ={
+    username,
+    password
+  };
+
   var myData = new User(req.body);
   myData.save()
       .then(item => {
@@ -65,10 +71,10 @@ app.post("/signup", (req, res) => {
 
 app.post("/signin",(req,res) =>{
   let{username,password} = req.body;
-  user.findOne({username:username},'username password',(err,myData)=>{
+  user.findOne({username:username},'username password',(err,userData)=>{
     if(!err){
-      console.log(myData.password);
-      if(password === myData.password){
+      console.log(userData.password);
+      if(password === userData.password){
         res.sendFile(path.join(__dirname+'/quiz.html'));
       }
       else{
