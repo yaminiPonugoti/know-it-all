@@ -11,7 +11,7 @@ $(document).ready(function () {
     var file;
     
  
-    var button = document.createElement("button");
+   /* var button = document.createElement("button");
     button.innerHTML = "Random";
     
     // 2. Append somewhere
@@ -23,23 +23,23 @@ $(document).ready(function () {
 
 
     var button2 = document.createElement("button");
-    button2.innerHTML = "Math";
+    button2.innerHTML = "Random";
     
     // 2. Append somewhere
     var body = document.getElementsByTagName("body")[0];
     body.appendChild(button2);
     
     // 3. Add event handler
-    button2.addEventListener ("click", myFunction2());
+    button.addEventListener ("click", myFunction2());
 
-
+*/
 
 
    /* $(stage).append('<button class = "button" onclick="myFunction()">Random</button>');
     $(stage).append('<button class = "button" onclick="myFunction2()">Math</button>');
 */
 
-    function myFunction() {
+    /*function myFunction() {
         $.getJSON('activity.json', function(data) {
             var min=0; 
             var max=data.quizlist.length;
@@ -106,8 +106,8 @@ $(document).ready(function () {
       }
 
 
-     
-          /*   $.getJSON(file, function(data) {
+     */
+            $.getJSON('activity.json', function(data) {
                 var min=0; 
                 var max=data.quizlist.length;
                 var range = data.quizlist.length;
@@ -135,7 +135,7 @@ $(document).ready(function () {
              
             displayQuestion();
             })//gtjson
-            */
+            
  
     function displayQuestion(){
      var rnd=Math.random()*3;
