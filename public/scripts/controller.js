@@ -9,12 +9,12 @@ $(document).ready(function () {
     var score=0;
     var numbers = new Array;
     var file;
-  displayChoices();
+ 
 
-    function displayChoices() {
+
     $(stage).append('<button class = "button" onclick="myFunction()">Random</button>');
     $(stage).append('<button class = "button" onclick="myFunction2()">Math</button>');
-    }
+
 
     function myFunction() {
         $.getJSON('activity.json', function(data) {
