@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/yaminiPonugoti/know-it-all/issues"
   },
-  "homepage": "https://github.com/yaminiPonugoti/know-it-all#readme",
+  "homepage": "https://know-it-all-quiz.herokuapp.com",
   "dependencies": {
     "body-parser": "^1.18.3",
     "cookie-parser": "~1.4.4",
