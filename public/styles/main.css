@@ -4,6 +4,12 @@ body {
         background-image:url(./WhiteBackground.jpeg);
         font-family: Arial, Helvetica, sans-serif;
         }
+.header{
+        background-color: #6F3994;
+        text-align: center;
+        padding: 20px;
+
+}
         #navContent{
             margin:auto;
             width:800px;
