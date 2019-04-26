@@ -55,6 +55,18 @@ app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
 
+app.get("/quiz", (req,res)=>{
+  reg.findOne({uname:req.body.uname, psw:req.body.psw}, function(err,user)
+  {
+    if(err || !user) { // "if error or no user"
+    res.send("User not found.")
+ } else {
+    res.send("logged in!");
+ }
+  }
+)});
+
+
 app.post("/signup", (req, res) => {
   var myData = new user(req.body);
   myData.save()
