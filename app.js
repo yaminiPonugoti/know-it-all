@@ -75,7 +75,7 @@ app.post("/signup", (req, res) => {
 app.post("/signin",(req,res) =>{
   let{username,password} = req.body;
   var user = req.body;
-  User.findOne({username: user.username}, function(err, existingUser){
+  user.findOne({username: user.username}, function(err, existingUser){
         if (existingUser==null) {
           res.sendFile(path.join(__dirname+'/login.html'));
         }
