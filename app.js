@@ -64,13 +64,19 @@ app.listen(port,() => {
 
 
 app.post("/signup", (req, res) => {
+  let {username, password} = req.body;
+  let userData = {
+    username,
+    password
+  };
   var myData = new user(req.body);
+
   myData.save()
       .then(item => {
           res.sendFile(path.join(__dirname+'/quiz.html'));
       })
       .catch(err => {
-          res.status(400).send("Unable to save to database");
+          res.sendFile(path.join(__dirname+'/login.html'));
       });
 });
 
