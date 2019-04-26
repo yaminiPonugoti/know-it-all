@@ -79,7 +79,7 @@ app.post("/signin",(req,res) =>{
       console.log(userData.password);
       if(password === userData.password){
         res.sendFile(path.join(__dirname+'/quiz.html'));
-      } else if(db.system.users.find({user:'login'}).count() == 0) {
+      } else if(db.runCommand({ usersInfo: { user: "username", db: "users" } }).users.length == 0) {
         res.sendFile(path.join(__dirname+'/login.html'));
       }
       else{
