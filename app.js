@@ -88,18 +88,17 @@ app.post("/quit", (req, res) => {
 
 app.post("/signin",(req,res) =>{
   let{username,password} = req.body;
-
-
   user.findOne({username:username},'username password',(err,userData)=>{
-  
     if(!err){
-      console.log(userData.password);
+      console.log(userData);
+      if(userData == null){
+        return res.sendFile(path.join(__dirname+'/login.html'));
+      }
+      // console.log(userData.password);
       if(password === userData.password){
         res.sendFile(path.join(__dirname+'/quiz.html'));
       }
       else{
-       
-          
        // res.sendFile(path.join(__dirname+'/login.html'));
         //alert("Incorrect Password!");
         return res.render(path.join(__dirname+'login.html'), { message: info.message })
