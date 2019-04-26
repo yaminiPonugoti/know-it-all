@@ -92,9 +92,11 @@ app.post("/signin",(req,res) =>{
         res.sendFile(path.join(__dirname+'/quiz.html'));
       }
       else{
-        
-        //res.sendFile(path.join(__dirname+'/login.html'));
-        res.render(path.join(__dirname+'login.html'), { message: info.message })
+       
+          
+        res.sendFile(path.join(__dirname+'/login.html'));
+        alert("Incorrect Password!");
+        //res.render(path.join(__dirname+'login.html'), { message: info.message })
         // res.status(401).send(password+'incorrect password');
       }
     }
