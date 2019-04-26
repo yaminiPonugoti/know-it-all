@@ -45,6 +45,10 @@ app.get('/quiz',function(req,res){
   res.sendFile(path.join(__dirname+'/quiz.html'));
 });
 
+app.get('/signin',function(req,res){
+  res.sendFile(path.join(__dirname+'/login.html'));
+});
+
 
 app.get('/signup',function(req,res){
   res.sendFile(path.join(__dirname+'/signup.html'));
