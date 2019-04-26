@@ -9,9 +9,12 @@ $(document).ready(function () {
     var score=0;
     var numbers = new Array;
     var file;
+    
  
 
 
+    /*$(stage).append('<button class = "button" onclick="myFunction()">Random</button>');
+    $(stage).append('<button class = "button" onclick="myFunction2()">Math</button>');
 
 
     function myFunction() {
@@ -79,17 +82,10 @@ $(document).ready(function () {
         displayQuestion();
         })//gtjson
       }
-
-
-    $(stage).append('<button class = "button" onclick="myFunction()">Random</button>');
-    $(stage).append('<button class = "button" onclick="myFunction2()">Math</button>');
-
-
-    
-
+*/
 
      
-          /*   $.getJSON(file, function(data) {
+             $.getJSON(file, function(data) {
                 var min=0; 
                 var max=data.quizlist.length;
                 var range = data.quizlist.length;
@@ -117,7 +113,7 @@ $(document).ready(function () {
              
             displayQuestion();
             })//gtjson
-            */
+            
  
     function displayQuestion(){
      var rnd=Math.random()*3;
