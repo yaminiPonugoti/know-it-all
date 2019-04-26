@@ -94,7 +94,7 @@ app.post("/signin",(req,res) =>{
       else{
         
         //res.sendFile(path.join(__dirname+'/login.html'));
-        <script type="text/javascript">alert("Stupid message");history.go(-1);</script>
+        res.render(path.join(__dirname+'login.html'), { message: info.message })
         // res.status(401).send(password+'incorrect password');
       }
     }
