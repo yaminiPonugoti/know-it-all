@@ -91,7 +91,8 @@ app.post("/signin",(req,res) =>{
   user.findOne({username:username},'username password',(err,userData)=>{
     if(!err){
       if(userData == null){
-        return res.sendFile(path.join(__dirname+'/login.html'));
+        res.sendFile(path.join(__dirname+'/login.html'));
+        return;
       }
       // console.log(userData.password);
       if(password === userData.password){
