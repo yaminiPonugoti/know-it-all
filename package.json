@@ -3,18 +3,18 @@
   "version": "1.0.0",
   "description": "made by Yamini - yponugot@purdue.edu          Shameetha - jeromes@purdue.edu          Dianne - santos50@purdue.edu",
   "main": "app.js",
+  "engines": {
+    "node": "11.14.0"
+  },
   "scripts": {
     "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.io/yaminiPonugoti/know-it-all.git"
   },
-  "keywords": [
-    "example",
-    "heroku"
-  ],
+  "keywords": [],
   "author": "Yamini, Shameetha, Dianne",
   "license": "ISC",
   "bugs": {

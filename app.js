@@ -1,7 +1,6 @@
 
 const http = require('http');
-
-const hostname = '127.0.0.1';
+//const hostname = '127.0.0.1';
 const port = process.env.PORT || 5000;
 
 //my code
@@ -54,9 +53,13 @@ app.get('/signup',function(req,res){
 });
 
 
-app.listen(port, hostname, () => {
+/*app.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
-});
+});*/
+
+app.listen(port,() => {
+	console.log(`Server running at port `+port);
+	});
 
 
 
