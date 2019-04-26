@@ -17,13 +17,13 @@ $(document).ready(function () {
                 
 
             for(i=0;i<10;i++){ 
-                var flag = 0;
+                var flag = 1;
                 
                while (flag) {
                     var random =Math.floor(Math.random() * (+max - +min)) + +min; 
                     if (!numbers.includes(random)) {
                         numbers.push(random);
-                        flag =1;
+                        flag =0;
                     }
                }
 
