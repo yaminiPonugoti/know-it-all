@@ -8,9 +8,26 @@ $(document).ready(function () {
     var numberOfQuestions;
     var score=0;
     var numbers = new Array;
-    
+    var file;
+  displayChoices();
+
+    function displayChoices() {
+    $(stage).append('<button class = "button" onclick="myFunction()">Random</button>');
+    $(stage).append('<button class = "button" onclick="myFunction2()">Math</button>');
+    }
+
+    function myFunction() {
+        file = 'activity.json';
+        
+      }
+      
+      function myFunction2() {
+        file = 'activity2.json';
+      }
+
+
      
-             $.getJSON('activity.json', function(data) {
+             $.getJSON(file, function(data) {
                 var min=0; 
                 var max=data.quizlist.length;
                 var range = data.quizlist.length;
