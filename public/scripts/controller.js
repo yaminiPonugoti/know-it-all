@@ -8,9 +8,88 @@ $(document).ready(function () {
     var numberOfQuestions;
     var score=0;
     var numbers = new Array;
+    var file;
+ 
+
+
+
+
+    function myFunction() {
+        $.getJSON('activity.json', function(data) {
+            var min=0; 
+            var max=data.quizlist.length;
+            var range = data.quizlist.length;
+            
+
+        for(i=0;i<10;i++){ 
+            var flag = 1;
+            
+           while (flag) {
+                var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+                if (!numbers.includes(random)) {
+                    numbers.push(random);
+                    flag =0;
+                }
+           }
+
+            questionBank[i]=new Array;
+            questionBank[i][0]=data.quizlist[random].question;
+            questionBank[i][1]=data.quizlist[random].option1;
+            questionBank[i][2]=data.quizlist[random].option2;
+            questionBank[i][3]=data.quizlist[random].option3;
+        }
+         numberOfQuestions=questionBank.length; 
+        
+         
+        displayQuestion();
+        })//gtjson
+
+
+        
+        
+      }
+      
+      function myFunction2() {
+        $.getJSON('activity2.json', function(data) {
+            var min=0; 
+            var max=data.quizlist.length;
+            var range = data.quizlist.length;
+            
+
+        for(i=0;i<10;i++){ 
+            var flag = 1;
+            
+           while (flag) {
+                var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+                if (!numbers.includes(random)) {
+                    numbers.push(random);
+                    flag =0;
+                }
+           }
+
+            questionBank[i]=new Array;
+            questionBank[i][0]=data.quizlist[random].question;
+            questionBank[i][1]=data.quizlist[random].option1;
+            questionBank[i][2]=data.quizlist[random].option2;
+            questionBank[i][3]=data.quizlist[random].option3;
+        }
+         numberOfQuestions=questionBank.length; 
+        
+         
+        displayQuestion();
+        })//gtjson
+      }
+
+
+    $(stage).append('<button class = "button" onclick="myFunction()">Random</button>');
+    $(stage).append('<button class = "button" onclick="myFunction2()">Math</button>');
+
+
     
+
+
      
-             $.getJSON('activity.json', function(data) {
+          /*   $.getJSON(file, function(data) {
                 var min=0; 
                 var max=data.quizlist.length;
                 var range = data.quizlist.length;
@@ -38,6 +117,7 @@ $(document).ready(function () {
              
             displayQuestion();
             })//gtjson
+            */
  
     function displayQuestion(){
      var rnd=Math.random()*3;
