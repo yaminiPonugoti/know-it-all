@@ -18,6 +18,8 @@ var bodyParser = require("body-parser");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+
+
 var nameSchema = new mongoose.Schema({
   username: String,
   password: String
@@ -96,7 +98,11 @@ app.post("/signin",(req,res) =>{
         res.sendFile(path.join(__dirname+'/quiz.html'));
       }
       else{
-        res.sendFile(path.join(__dirname+'/login.html'));
+       
+          
+       // res.sendFile(path.join(__dirname+'/login.html'));
+        //alert("Incorrect Password!");
+        return res.render(path.join(__dirname+'login.html'), { message: info.message })
         // res.status(401).send(password+'incorrect password');
       }
     }
