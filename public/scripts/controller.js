@@ -12,12 +12,9 @@ $(document).ready(function () {
  
 
 
-    $(stage).append('<button class = "button" onclick="myFunction()">Random</button>');
-    $(stage).append('<button class = "button" onclick="myFunction2()">Math</button>');
 
 
     function myFunction() {
-        print("in function1");
         $.getJSON('activity.json', function(data) {
             var min=0; 
             var max=data.quizlist.length;
@@ -82,6 +79,13 @@ $(document).ready(function () {
         displayQuestion();
         })//gtjson
       }
+
+
+    $(stage).append('<button class = "button" onclick="myFunction()">Random</button>');
+    $(stage).append('<button class = "button" onclick="myFunction2()">Math</button>');
+
+
+    
 
 
      
