@@ -17,6 +17,7 @@ $(document).ready(function () {
 
 
     function myFunction() {
+        print("in function1");
         $.getJSON('activity.json', function(data) {
             var min=0; 
             var max=data.quizlist.length;
@@ -45,6 +46,9 @@ $(document).ready(function () {
          
         displayQuestion();
         })//gtjson
+
+
+        
         
       }
       
