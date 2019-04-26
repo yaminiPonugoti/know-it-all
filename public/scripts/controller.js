@@ -7,17 +7,31 @@ $(document).ready(function () {
     var questionLock=false;
     var numberOfQuestions;
     var score=0;
-
+    var numbers = new Array;
     
      
              $.getJSON('activity.json', function(data) {
-    
-            for(i=0;i<data.quizlist.length;i++){ 
+                var min=0; 
+                var max=data.quizlist.length;
+                var range = data.quizlist.length;
+                
+
+            for(i=0;i<10;i++){ 
+                var flag = 0;
+                
+               while (flag) {
+                    var random =Math.floor(Math.random() * (+max - +min)) + +min; 
+                    if (!numbers.includes(random)) {
+                        numbers.push(random);
+                        flag =1;
+                    }
+               }
+
                 questionBank[i]=new Array;
-                questionBank[i][0]=data.quizlist[i].question;
-                questionBank[i][1]=data.quizlist[i].option1;
-                questionBank[i][2]=data.quizlist[i].option2;
-                questionBank[i][3]=data.quizlist[i].option3;
+                questionBank[i][0]=data.quizlist[random].question;
+                questionBank[i][1]=data.quizlist[random].option1;
+                questionBank[i][2]=data.quizlist[random].option2;
+                questionBank[i][3]=data.quizlist[random].option3;
             }
              numberOfQuestions=questionBank.length; 
             
@@ -42,12 +56,12 @@ $(document).ready(function () {
       if(questionLock==false){questionLock=true;	
       //correct answer
       if(this.id==rnd){
-       $(stage).append('<div class="feedback1">CORRECT</div>');
+       $(stage).append('<div class="correct">CORRECT</div>');
        score++;
        }
       //wrong answer	
       if(this.id!=rnd){
-       $(stage).append('<div class="feedback2">WRONG</div>');
+       $(stage).append('<div class="wrong">WRONG</div>');
       }
       setTimeout(function(){changeQuestion()},1000);
      }})
@@ -75,6 +89,7 @@ $(document).ready(function () {
         function displayFinalSlide(){
             
             $(stage).append('<div class="questionText">You have finished the quiz!<br><br>Total questions: '+numberOfQuestions+'<br>Correct answers: '+score+'</div>');
+
             
         }//display final slide
         
