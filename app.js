@@ -74,13 +74,18 @@ app.post("/signup", (req, res) => {
 
 app.post("/signin",(req,res) =>{
   let{username,password} = req.body;
+  User.findOne({username: user.username}, function(err, existingUser){
+        if (existingUser==null) {
+          res.sendFile(path.join(__dirname+'/login.html'));
+        }
+  })
+  
   user.findOne({username:username},'username password',(err,userData)=>{
+  
     if(!err){
       console.log(userData.password);
       if(password === userData.password){
         res.sendFile(path.join(__dirname+'/quiz.html'));
-      } else if(db.users.find({username}).limit(1).size()==0) {
-        res.sendFile(path.join(__dirname+'/login.html'));
       }
       else{
         res.sendFile(path.join(__dirname+'/login.html'));
