@@ -38,12 +38,11 @@ var nameSchema = new mongoose.Schema({
 
 app.get('/',function(req,res){
   res.sendFile(path.join(__dirname+'/login.html'));
-  console.log(path.join(__dirname+'/login.html'));
 });
 
-app.get('/quiz',function(req,res){
-  res.sendFile(path.join(__dirname+'/quiz.html'));
-});
+// app.get('/quiz',function(req,res){
+//   res.sendFile(path.join(__dirname+'/quiz.html'));
+// });
 
 app.get('/signin',function(req,res){
   res.sendFile(path.join(__dirname+'/login.html'));
@@ -70,6 +69,10 @@ app.post("/signup", (req, res) => {
       .catch(err => {
           res.status(400).send("Unable to save to database");
       });
+});
+
+app.post("/quit", (req, res) => {
+  res.sendFile(path.join(__dirname+'/login.html'));
 });
 
 app.post("/signin",(req,res) =>{
