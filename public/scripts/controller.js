@@ -9,12 +9,37 @@ $(document).ready(function () {
     var score=0;
     var numbers = new Array;
     var file;
+    
  
+   /* var button = document.createElement("button");
+    button.innerHTML = "Random";
+    
+    // 2. Append somewhere
+    var body = document.getElementsByTagName("body")[0];
+    body.appendChild(button);
+    
+    // 3. Add event handler
+    button.addEventListener ("click", myFunction());
 
 
+    var button2 = document.createElement("button");
+    button2.innerHTML = "Random";
+    
+    // 2. Append somewhere
+    var body = document.getElementsByTagName("body")[0];
+    body.appendChild(button2);
+    
+    // 3. Add event handler
+    button.addEventListener ("click", myFunction2());
+
+*/
 
 
-    function myFunction() {
+   /* $(stage).append('<button class = "button" onclick="myFunction()">Random</button>');
+    $(stage).append('<button class = "button" onclick="myFunction2()">Math</button>');
+*/
+
+    /*function myFunction() {
         $.getJSON('activity.json', function(data) {
             var min=0; 
             var max=data.quizlist.length;
@@ -81,15 +106,8 @@ $(document).ready(function () {
       }
 
 
-    $(stage).append('<button class = "button" onclick="myFunction()">Random</button>');
-    $(stage).append('<button class = "button" onclick="myFunction2()">Math</button>');
-
-
-    
-
-
-     
-          /*   $.getJSON(file, function(data) {
+     */
+            $.getJSON('activity.json', function(data) {
                 var min=0; 
                 var max=data.quizlist.length;
                 var range = data.quizlist.length;
@@ -117,7 +135,7 @@ $(document).ready(function () {
              
             displayQuestion();
             })//gtjson
-            */
+            
  
     function displayQuestion(){
      var rnd=Math.random()*3;
