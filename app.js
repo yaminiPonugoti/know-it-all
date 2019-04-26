@@ -90,9 +90,8 @@ app.post("/signin",(req,res) =>{
   let{username,password} = req.body;
   user.findOne({username:username},'username password',(err,userData)=>{
     if(!err){
-      console.log(userData);
       if(userData == null){
-        return res.sendFile(path.join(__dirname+'/login.html'));
+        res.sendFile(path.join(__dirname+'/login.html'));
       }
       // console.log(userData.password);
       if(password === userData.password){
@@ -101,7 +100,7 @@ app.post("/signin",(req,res) =>{
       else{
        // res.sendFile(path.join(__dirname+'/login.html'));
         //alert("Incorrect Password!");
-        return res.render(path.join(__dirname+'login.html'), { message: info.message })
+        res.sendFile(path.join(__dirname+'login.html'));
         // res.status(401).send(password+'incorrect password');
       }
     }
