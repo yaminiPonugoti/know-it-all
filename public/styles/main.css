@@ -57,7 +57,7 @@ body {
        margin-left: auto !important; 
 }
     
-    .correct{
+    .feedback1{
             width:200px;
             padding:10px;
             font-size:40px;
@@ -66,7 +66,7 @@ body {
             text-align:center;
             }
                      
-    .wrong{
+    .feedback2{
             width:200px;
             padding:10px;
             font-size:40px;
